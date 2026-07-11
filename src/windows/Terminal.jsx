@@ -24,7 +24,7 @@ const Terminal = () => {
 
         <ul className = "content">
             {techStack.map (({category, items}) =>(
-                <li key = {category} className = "flex-center">
+                <li key = {category} className = "flex items-start">
                     <Check className = "check" size = {20}/>
                     <h3>{category}</h3>
                     <ul>
