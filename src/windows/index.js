@@ -4,7 +4,8 @@ import Resume from '#windows/Resume.jsx'
 import Finder from '#windows/Finder.jsx'
 import Text from '#windows/Text.jsx'
 import Image from '#windows/Image.jsx'
-import Contact from '#windows/contact.jsx'
+import Contact from '#windows/Contact.jsx'
+import Photos from '#windows/Photos.jsx'
 
 export {
     Terminal,
@@ -13,5 +14,6 @@ export {
     Finder,
     Text,
     Image,
-    Contact
+    Contact,
+    Photos
  };

@@ -16,7 +16,7 @@ const Text = () => {
             <h2>{name}</h2>
         </div>
 
-        <div className="p-5 space-y-6 bg-white">
+        <div className="p-5 space-y-6 bg-white dark:bg-neutral-900 dark:text-neutral-200">
             {image && <img src={image} alt={name} />}
             {subtitle && <h3>{subtitle}</h3>}
 

@@ -16,7 +16,7 @@ const Image = () => {
             <h2>{name}</h2>
         </div>
 
-        <div className="image-file">
+        <div className="preview">
             <img src={imageUrl} alt={name} />
         </div>
     </>
