@@ -1,9 +1,9 @@
-import { Navbar, Welcome, Dock } from '#components'
-import { Terminal } from '#windows';
+import { Navbar, Welcome, Dock, Home } from '#components'
+import { Safari, Terminal, Resume, Finder, Text, Image, Contact } from '#windows';
 import gsap from 'gsap';
 
 import { Draggable } from "gsap/Draggable";
-// eslint-disable-next-line no-undef
+
 gsap.registerPlugin(Draggable);
 
 const App = () => {
@@ -14,6 +14,13 @@ const App = () => {
       <Dock />
 
       <Terminal/>
+      <Safari/>
+      <Resume/>
+      <Finder />
+      <Text />
+      <Image />
+      <Contact />
+      <Home />
     </main>
   )
 }

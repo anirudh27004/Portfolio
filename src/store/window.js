@@ -1,8 +1,7 @@
 import { create } from 'zustand';
 import { immer } from 'zustand/middleware/immer';
 import { WINDOW_CONFIG, INITIAL_Z_INDEX} from '#constants/index.js';
- 
-// eslint-disable-next-line no-unused-vars
+
 const useWindowStore = create(
     immer((set) => ({
     windows: WINDOW_CONFIG,

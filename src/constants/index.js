@@ -32,6 +32,7 @@ const navIcons = [
   {
     id: 4,
     img: "/icons/mode.svg",
+    type: "theme",
   },
 ];
 
@@ -46,12 +47,6 @@ const dockApps = [
     id: "safari",
     name: "Articles", // was "Safari"
     icon: "safari.png",
-    canOpen: true,
-  },
-  {
-    id: "photos",
-    name: "Gallery", // was "Photos"
-    icon: "photos.png",
     canOpen: true,
   },
   {
@@ -77,24 +72,24 @@ const dockApps = [
 const blogPosts = [
   {
     id: 1,
-    date: "dummy",
-    title: "dummy",
-    image: "dummy",
-    link: "dummy",
+    date: "Jul 12, 2026",
+    title: "RAG tutorials end where the real problems start",
+    image: "/images/blog1.png",
+    link: "https://anirudh27.hashnode.dev/rag-tutorials-end-where-the-real-problems-start",
   },
   {
     id: 2,
-    date: "dummy",
-    title: "dummy",
-    image: "dummy",
-    link: "dummy",
+    date: "Jul 12, 2026",
+    title: "The model call is the easy part",
+    image: "/images/blog2.png",
+    link: "https://anirudh27.hashnode.dev/the-model-call-is-the-easy-part",
   },
   {
     id: 3,
-    date: "dummy",
-    title: "dummy",
-    image: "dummy",
-    link: "dummy",
+    date: "Jul 12, 2026",
+    title: "What actually happens when you click deploy",
+    image: "/images/blog3.png",
+    link: "https://anirudh27.hashnode.dev/what-actually-happens-when-you-click-deploy",
   },
 ];
 
@@ -105,7 +100,7 @@ const techStack = [
   },
   {
     category: "AI/ML",
-    items: ["Python", "TensorFlow", "PyTorch", "scikit-learn", "OpenCV", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Keras", "NLTK", "spaCy", "Hugging Face Transformers", "OpenAI API", "LangChain", "FastAPI", "Streamlit", "Gradio", "Jupyter Notebook", "Google Colab"],
+    items: ["Python", "TensorFlow", "PyTorch", "LangGraph" , "R", "R-Studio"],
   },
   {
     category: "Styling",
@@ -113,7 +108,7 @@ const techStack = [
   },
   {
     category: "Backend",
-    items: ["Node.js", "Express", "NestJS", "Hono"],
+    items: ["Node.js", "Express", "NestJS", "Django" , "Flask"],
   },
   {
     category: "Database",
@@ -121,7 +116,7 @@ const techStack = [
   },
   {
     category: "Dev Tools",
-    items: ["Git", "GitHub", "Docker"],
+    items: ["Git", "GitHub", "Docker", "Kubernetes", "AWS"],
   },
 ];
 
@@ -156,53 +151,6 @@ const socials = [
   },
 ];
 
-const photosLinks = [
-  {
-    id: 1,
-    icon: "/icons/gicon1.svg",
-    title: "Library",
-  },
-  {
-    id: 2,
-    icon: "/icons/gicon2.svg",
-    title: "Memories",
-  },
-  {
-    id: 3,
-    icon: "/icons/file.svg",
-    title: "Places",
-  },
-  {
-    id: 4,
-    icon: "/icons/gicon4.svg",
-    title: "People",
-  },
-  {
-    id: 5,
-    icon: "/icons/gicon5.svg",
-    title: "Favorites",
-  },
-];
-
-const gallery = [
-  {
-    id: 1,
-    img: "/images/gal1.png",
-  },
-  {
-    id: 2,
-    img: "/images/gal2.png",
-  },
-  {
-    id: 3,
-    img: "/images/gal3.png",
-  },
-  {
-    id: 4,
-    img: "/images/gal4.png",
-  },
-];
-
 export {
   navLinks,
   navIcons,
@@ -210,8 +158,6 @@ export {
   blogPosts,
   techStack,
   socials,
-  photosLinks,
-  gallery,
 };
 
 const WORK_LOCATION = {
@@ -221,10 +167,10 @@ const WORK_LOCATION = {
   icon: "/icons/work.svg",
   kind: "folder",
   children: [
-    // ▶ Project 1
+    // Project 1: WeNaude Labs (flagship)
     {
       id: 5,
-      name: "Dummy Project 1",
+      name: "WeNaude Labs",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-5", // icon position inside Finder
@@ -232,52 +178,43 @@ const WORK_LOCATION = {
       children: [
         {
           id: 1,
-          name: "Dummy Project 1.txt",
+          name: "WeNaude Labs.txt",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
           position: "top-5 left-10",
           description: [
-            "Dummy description line one.",
-            "Dummy description line two.",
-            "Dummy description line three.",
-            "Dummy description line four.",
+            "A full-stack text-to-speech platform inspired by ElevenLabs.",
+            "Voice generation, a browsable voice library, and generation history with waveform playback.",
+            "Real usage-based subscription billing via Polar and Clerk-powered authentication with org/team support.",
+            "Built with Next.js 16, React 19, tRPC, Prisma, PostgreSQL, and AWS S3 for audio storage.",
           ],
         },
         {
           id: 2,
-          name: "dummy.com",
+          name: "wenaude-labs.live",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "dummy",
+          href: "https://wenaude-labs-production.up.railway.app/",
           position: "top-10 right-20",
         },
         {
-          id: 4,
-          name: "dummy.png",
-          icon: "/images/image.png",
+          id: 3,
+          name: "github.com",
+          icon: "/images/safari.png",
           kind: "file",
-          fileType: "img",
-          position: "top-52 right-80",
-          imageUrl: "dummy",
-        },
-        {
-          id: 5,
-          name: "Design.fig",
-          icon: "/images/plain.png",
-          kind: "file",
-          fileType: "fig",
-          href: "dummy",
+          fileType: "url",
+          href: "https://github.com/anirudh27004/WeNaude-Labs",
           position: "top-60 right-20",
         },
       ],
     },
 
-    // ▶ Project 2
+    // Project 2: Vercel Clone
     {
       id: 6,
-      name: "Dummy Project 2",
+      name: "Vercel Clone",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-52 right-80",
@@ -285,52 +222,34 @@ const WORK_LOCATION = {
       children: [
         {
           id: 1,
-          name: "Dummy Project 2.txt",
+          name: "Vercel Clone.txt",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
           position: "top-5 right-10",
           description: [
-            "Dummy description line one.",
-            "Dummy description line two.",
-            "Dummy description line three.",
-            "Dummy description line four.",
+            "A Vercel clone built as three services working together.",
+            "api-server: HTTP server exposing the REST APIs, alongside a socket.io server.",
+            "build-server: a Docker image that clones a repo, builds it, and pushes the build to S3 (via AWS ECR).",
+            "s3-reverse-proxy: maps subdomains and domains to the static build assets in the S3 bucket.",
           ],
         },
         {
           id: 2,
-          name: "dummy.com",
+          name: "github.com",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "dummy",
+          href: "https://github.com/anirudh27004/Vercel_Clone",
           position: "top-20 left-20",
-        },
-        {
-          id: 4,
-          name: "dummy.png",
-          icon: "/images/image.png",
-          kind: "file",
-          fileType: "img",
-          position: "top-52 left-80",
-          imageUrl: "dummy",
-        },
-        {
-          id: 5,
-          name: "Design.fig",
-          icon: "/images/plain.png",
-          kind: "file",
-          fileType: "fig",
-          href: "dummy",
-          position: "top-60 left-5",
         },
       ],
     },
 
-    // ▶ Project 3
+    // Project 3: Eerie
     {
       id: 7,
-      name: "Dummy Project 3",
+      name: "Eerie",
       icon: "/images/folder.png",
       kind: "folder",
       position: "top-10 left-80",
@@ -338,43 +257,34 @@ const WORK_LOCATION = {
       children: [
         {
           id: 1,
-          name: "Dummy Project 3.txt",
+          name: "Eerie.txt",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
           position: "top-5 left-10",
           description: [
-            "Dummy description line one.",
-            "Dummy description line two.",
-            "Dummy description line three.",
-            "Dummy description line four.",
+            "An interactive 3D landing page built from two images layered on top of each other.",
+            "Moving the cursor reveals the hidden world beneath through a liquid lens effect, which smoothly hides again as the mouse moves away.",
+            "Custom GLSL trail, refraction, vignette, and chromatic aberration shaders on a Three.js ping-pong FBO render loop.",
+            "Built with Next.js 16, Three.js, Framer Motion, and Tailwind CSS v4.",
           ],
         },
         {
           id: 2,
-          name: "dummy.com",
+          name: "eerie-two.vercel.app",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "dummy",
+          href: "https://eerie-two.vercel.app",
           position: "top-10 right-20",
         },
         {
-          id: 4,
-          name: "dummy.png",
-          icon: "/images/image.png",
+          id: 3,
+          name: "github.com",
+          icon: "/images/safari.png",
           kind: "file",
-          fileType: "img",
-          position: "top-52 right-80",
-          imageUrl: "dummy",
-        },
-        {
-          id: 5,
-          name: "Design.fig",
-          icon: "/images/plain.png",
-          kind: "file",
-          fileType: "fig",
-          href: "dummy",
+          fileType: "url",
+          href: "https://github.com/anirudh27004/eerie",
           position: "top-60 right-20",
         },
       ],
@@ -391,45 +301,17 @@ const ABOUT_LOCATION = {
   children: [
     {
       id: 1,
-      name: "me.png",
-      icon: "/images/image.png",
-      kind: "file",
-      fileType: "img",
-      position: "top-10 left-5",
-      imageUrl: "dummy",
-    },
-    {
-      id: 2,
-      name: "casual-me.png",
-      icon: "/images/image.png",
-      kind: "file",
-      fileType: "img",
-      position: "top-28 right-72",
-      imageUrl: "dummy",
-    },
-    {
-      id: 3,
-      name: "conference-me.png",
-      icon: "/images/image.png",
-      kind: "file",
-      fileType: "img",
-      position: "top-52 left-80",
-      imageUrl: "dummy",
-    },
-    {
-      id: 4,
       name: "about-me.txt",
       icon: "/images/txt.png",
       kind: "file",
       fileType: "txt",
-      position: "top-60 left-5",
-      subtitle: "dummy",
-      image: "dummy",
+      position: "top-10 left-5",
+      subtitle: "Full-stack developer who likes shipping AI products end to end.",
       description: [
-        "Dummy about-me line one.",
-        "Dummy about-me line two.",
-        "Dummy about-me line three.",
-        "Dummy about-me line four.",
+        "I'm Anirudh, a developer who enjoys the unglamorous part of building software: taking an idea past the demo stage and turning it into something people can actually use.",
+        "I've led a team of six building a research automation platform for a market research client, with real users and real documents. That project taught me most of what I know about RAG systems, and why retrieval in production is a lot harder than any tutorial lets on.",
+        "On my own time I build full products end to end. WeNaude Labs is my take on ElevenLabs, with a voice library and usage-based billing. I've also built a small Vercel clone and a few interactive 3D experiments, mostly to understand how the tools I use every day actually work under the hood.",
+        "When I'm not shipping, I'm usually writing about what I learned along the way. You can find those posts in the Articles app on this desktop.",
       ],
     },
   ],
@@ -448,8 +330,7 @@ const RESUME_LOCATION = {
       icon: "/images/pdf.png",
       kind: "file",
       fileType: "pdf",
-      // you can add `href` if you want to open a hosted resume
-      // href: "/your/resume/path.pdf",
+      // Opens the Resume window, which loads /files/resume.pdf directly.
     },
   ],
 };
@@ -496,7 +377,6 @@ const WINDOW_CONFIG = {
   contact: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   resume: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   safari: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  photos: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
   imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
